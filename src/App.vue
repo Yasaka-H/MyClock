@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    This is world clock
+    <h1>This is world clock</h1>
     <main-clock></main-clock>
   </div>
 </template>

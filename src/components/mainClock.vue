@@ -9,6 +9,9 @@
               :disabled="item.disabled">
       </el-option>
     </el-select>
+    <el-button type="primary" icon="el-icon-plus" circle v-on:click="addList"></el-button>
+    <br>
+    <span>Selected: {{ selected }}</span>
   </div>
 </template>
 
@@ -18,19 +21,18 @@ export default {
     name: 'mainClock',
     data() {
       return {
-        selected: 'Japan',
         options: [
+          { label: 'Please select country', disabled: true },
           { value: -9, label: 'Japan', disabled: false },
           { value: 0, label: 'UK', disabled: false },
           { value: 4, label: 'USA', disabled: false }
-        ]
+        ],
+        value: '',
+        list: []
       }
     },
     methods: {
-        addCountry() {
-            let gmt = (new Date()).toGMTString()
-            this.word = gmt
-        }
+        addList: function() {}
     }
 }
 
